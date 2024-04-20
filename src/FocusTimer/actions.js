@@ -1,7 +1,6 @@
 import { buttonPressAudio } from "./sounds.js";
 import state from "./state.js";
 import * as timer from "./timer.js";
-import * as elements from './elements.js';
 
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle('running')
@@ -20,6 +19,9 @@ export function reset(){
 }
 
 export function addTime(){
+
+  if(state.isRunning) return
+
   state.minutes += 5
   timer.updateDisplay()
   buttonPressAudio.play()
@@ -27,9 +29,14 @@ export function addTime(){
 
 export function removeTime(){
 
+  if(state.isRunning) return
   if(state.minutes <= 0) return
 
   state.minutes -= 5
   timer.updateDisplay()
+  buttonPressAudio.play()
+}
+
+export function sound(){
   buttonPressAudio.play()
 }

@@ -8,7 +8,10 @@
   --background-color: #fff;
   --text-color: #323238;
   --button-background-color: #E1E1E6;
-  --active-button-background-color: #02799D;
+  --active-forest-button-background-color: #03b395;
+  --active-rain-button-background-color: #02799D;
+  --active-coffee-button-background-color: #7a4600;
+  --active-fireplace-button-background-color: #d4c603;
   font-size: clamp(1em, 1em + 1vw, 1.5em);
   font-family: sans-serif;
 }
@@ -93,4 +96,24 @@ body{
   background-color: var(--button-background-color);
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+#sounds button.forest{
+  background-color: var(--active-forest-button-background-color);
+  color: var(--text-color);
+}
+
+#sounds button.rain{
+  background-color: var(--active-rain-button-background-color);
+  color: var(--text-color);
+}
+
+#sounds button.coffee{
+  background-color: var(--active-coffee-button-background-color);
+  color: var(--text-color);
+}
+
+#sounds button.fireplace{
+  background-color: var(--active-fireplace-button-background-color);
+  color: var(--text-color);
 }
